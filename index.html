@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+  </head>
+
+  <body class="bodyy">
+      <div class="container main-container2 mt-5">
+          <section class="main-section">
+          <h1 class="textt">Totally Trivial Trivia!</h1>
+          <hr>
+    <p> Time Remaining:</p>
+    <div id="show-number"></div>
+
+    <br>
+      <p>Who is the first president of the United States?</p>
+      <li>a. George Washington</li>
+      <li>b. Donald Trump</li>
+      <li>c. Thomas Jefferson</li>
+      <li>d. Kanye West</li>
+      </li>
+      <br>
+      <p>What is the best pet?</p>
+      <li>a. Hamster</li>
+      <li>b. Cat</li>
+      <li>c. Turtle</li>
+      <li>d. Dog</li>
+      </li>
+      <br>
+      <p>Who sailed the Ocean blue in 1942</li>
+      <li>a. King George II</li>
+      <li>b. John Snow</li>
+      <li>c. Christopher Columbus</li>
+      <li>d. James Cook</li>
+
+      <div id="Trivia"></div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    
+    var number = 30;
+
+
+    var intervalId;
+
+    function run() {
+      clearInterval(intervalId);
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+
+
+      number--;
+
+      $("#show-number").html("<h2>" + number + "</h2>");
+
+
+      if (number === 0) {
+
+
+        stop();
+
+        alert("Time's up! Try again.");
+      }
+    }
+
+    function stop() {
+
+
+      clearInterval(intervalId);
+    }
+
+    run();
+
+
+
+
+    </script>
+
+  </body>
+
+</html>
